@@ -1,0 +1,40 @@
+# historically attested Apple Support moves on this Twitter corpus (2017 / iOS 11).
+# Drafts retrieve neighbor URLs rather than inventing new ones.
+
+brand: Apple Support
+voice:
+  - short
+  - calm
+  - one next step
+  - never ask for passwords in public
+  - collect model + iOS version before device-specific diagnosis
+
+intents:
+  keyboard_input:
+    historical_move: public workaround article, often without DM
+    auto: true
+  language_unsupported:
+    historical_move: canned English-only + language portal
+    auto: true
+  connectivity:
+    historical_move: Control Center explainer article OR DM for persistent drops
+  battery_power:
+    historical_move: almost always DM + device/iOS intake
+  software_update_bug:
+    historical_move: DM, or ask which app / iOS version
+  account_security:
+    historical_move: iforgot / account security team; never public recovery
+  billing_purchases:
+    historical_move: confirm charge location, then store/account team
+  icloud_data:
+    historical_move: Photos specialists or DM; do not wipe
+  hardware:
+    historical_move: country + service options in DM
+  accessories:
+    historical_move: restart Watch, DM AirPods hardware
+  macos:
+    historical_move: Safe Mode / NVRAM / specialty team
+  how_to_feature:
+    historical_move: public settings path when the question is complete
+  other:
+    historical_move: ask a clarifying question or DM

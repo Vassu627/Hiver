@@ -1,0 +1,15 @@
+data/raw/
+data/processed/index/
+data/processed/corpus.jsonl.gz
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+.DS_Store
+scripts/_explore.py
+scripts/_sample_candidates.py
+data/golden/_candidates.jsonl
+results/_judge_sample.jsonl

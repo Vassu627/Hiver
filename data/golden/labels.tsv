@@ -1,0 +1,232 @@
+id	intent	route	reason_tag	notes
+205f113db6fd	account_security	escalate	account_recovery	MacBook claimed hacked / locked out
+654b9eaf1c74	keyboard_input	auto	keyboard_public_workaround	question marks complaint
+194d31d34323	battery_power	escalate	battery_intake	iOS 11.1 drain
+e340e2eb7bda	language_unsupported	auto	language_portal	Spanish battery complaint
+b57589d941f3	battery_power	escalate	battery_intake	weak label was how_to; this is drain
+9bd19e6395fc	macos	escalate	macos_diagnostics	iMac recovery / OS X install unavailable
+ec95be410dc3	macos	escalate	macos_diagnostics	screenshot of MacBook flash
+1d5519090cd1	accessories	escalate	accessory_diagnostics	new AirPods right side dead
+3eb72d112708	keyboard_input	auto	keyboard_public_workaround	I/question-mark before 11.1
+12b647587ddf	billing_purchases	escalate	billing_verify	unwanted 1TB iCloud charge; looks phishing but money is in the tweet
+72734ecde181	account_security	escalate	account_recovery	unsolicited Apple Store hack calls; could be phishing but they may also be compromised
+9f971760dd50	account_security	escalate	already_tried	Apple ID disabled repeatedly after 4 contacts
+df52a79d62b4	account_security	escalate	account_recovery	iPhone disabled / erased from iCloud
+31d588884a5b	language_unsupported	auto	language_portal	Arabic
+bf6d97887ac5	keyboard_input	auto	keyboard_public_workaround	I️ repeated
+07508c91eeb5	accessories	escalate	accessory_diagnostics	does not want to reset Watch to pair
+aba0b66ae8e7	keyboard_input	auto	keyboard_public_workaround	I.T autocorrect
+ae5ab3ca2ec9	icloud_data	escalate	data_loss	iCloud Music Library unavailable a year
+5117b064d82a	language_unsupported	auto	language_portal	Arabic
+0e39c78da60f	battery_power	escalate	battery_intake	weak label billing; 5s battery
+b5fa7a42e1b1	macos	auto	sales_pointer	MacBook case size; Apple sent Online Sales
+c46760e8454c	account_security	escalate	account_recovery	locked out of 2FA after iOS 11
+7012cdc370fa	connectivity	escalate	update_bug_intake	constant Wi-Fi problem
+af1f38dd4549	software_update_bug	escalate	update_bug_intake	YouTube app will not update on 11.0.3
+6c7600bb76fa	software_update_bug	escalate	update_bug_intake	App Store downloads impossibly slow; not a charge
+4fc901a54ded	software_update_bug	escalate	update_bug_intake	random freeze after OS upgrade
+65469cb0ef95	keyboard_input	auto	keyboard_public_workaround	letter I substitution
+bfee07140463	icloud_data	escalate	data_loss	cannot connect to iCloud
+9994762fc5e7	language_unsupported	auto	language_portal	Spanish app connectivity
+515f017764a1	battery_power	escalate	battery_intake	iPhone 6 slow + battery after update
+e5cea4d690fe	connectivity	escalate	already_tried	Wi-Fi still slow after toggle
+722caba0215f	account_security	auto	howto_public	what happens if I sign out of Apple ID — informational, Apple answered publicly
+098c9e9a1006	accessories	escalate	accessory_diagnostics	AirPods not working
+885fa85ea7cd	battery_power	escalate	battery_intake	lost 55% in an hour
+0298b9985de5	battery_power	escalate	battery_intake	8+ battery trash
+f24f3a131578	icloud_data	escalate	data_loss	photos not on iCloud
+b6e237a0dee6	language_unsupported	auto	language_portal	Portuguese Wi-Fi
+a02c0cfb0f30	account_security	escalate	account_recovery	2FA phone number gone
+e1a0d6ac6241	software_update_bug	escalate	update_bug_intake	wants iOS 11.2 because of 10.1 issues
+9b3a7b4ebe7b	connectivity	escalate	update_bug_intake	BT and Wi-Fi drops
+7abde7fdca23	battery_power	escalate	battery_intake	battery + keyboard freeze + app crash
+65ca92cc91c0	battery_power	escalate	battery_intake	11.0.3 drain and crash
+18250a230132	account_security	escalate	account_recovery	Apple ID disabled during app update
+a8b035c32179	billing_purchases	escalate	billing_verify	cannot update payment card
+f26d05013969	battery_power	escalate	battery_intake	drain after iOS 11
+e95254fe9af3	hardware	escalate	hardware_service	cracked screen
+cc0ef78e103b	hardware	escalate	update_bug_intake	iOS 11 camera sample; likely software camera bug
+e70160d07577	battery_power	escalate	battery_intake	21% to 4% in 3 min while off
+59c3dd50893f	software_update_bug	escalate	update_bug_intake	iOS 11 crashing
+88948117ac9a	icloud_data	escalate	data_loss	contacts gone
+8fac9c47050b	battery_power	escalate	battery_intake	drain since 11.0.2
+9e71e4c055aa	account_security	escalate	account_recovery	Apple ID prompt then crash
+19be4d46d871	language_unsupported	auto	language_portal	Spanish
+0abed9478783	battery_power	escalate	battery_intake	iPhone 6 charging 3-4x/day
+0c1fddd0cdb7	macos	escalate	macos_diagnostics	High Sierra cannot log in
+6cb27b1f650b	accessories	escalate	data_loss	Watch workout disappeared / did not sync
+114d9a55c9af	language_unsupported	auto	language_portal	Spanish battery
+06aa56c7ab77	connectivity	escalate	already_tried	only one Wi-Fi, still failing
+41eb70eaff90	how_to_feature	auto	howto_public	iPhone X screenshot how-to; Apple sent public steps
+f5d940d02013	billing_purchases	escalate	billing_verify	App Store login issues
+170cb80a2142	software_update_bug	escalate	update_bug_intake	App Store badge stuck at 5
+de3612ef6090	software_update_bug	escalate	update_bug_intake	restart 30 times after update
+508ffff40757	software_update_bug	escalate	update_bug_intake	iPhone 7 restarting
+bc2892b5294d	macos	escalate	already_tried	iTunes reinstall did not work
+17e5e8be37df	billing_purchases	escalate	billing_verify	wants account unlocked after charge
+72f4fa06842b	keyboard_input	auto	keyboard_public_workaround	new autocorrects / I.T
+9d54840d0c5d	software_update_bug	escalate	update_bug_intake	iOS 11.2 beta notification sound
+e95eb8016b83	macos	escalate	macos_diagnostics	MacBook Pro slow after update
+5881345ffe71	language_unsupported	auto	language_portal	Arabic
+fecd60528a9b	how_to_feature	auto	feature_feedback	Control Center BT/Wi-Fi stays on; Apple sent feedback page
+96c4da7f8eb5	battery_power	escalate	battery_intake	7 Plus 100 to 15 overnight
+2e75c05c207e	connectivity	auto	control_center_explainer	Bluetooth icon on when not connected — expected CC behavior
+01abfd92e27a	language_unsupported	auto	language_portal	Japanese iPhone X reservation complaint
+2b963c95ddd6	software_update_bug	escalate	update_bug_intake	podcast lock screen times
+53667e632ae1	other	escalate	insufficient_context	vague iPhone X / iPad failure, no symptom
+e61b8ca89488	macos	escalate	macos_diagnostics	High Sierra Photos RAW editing unusable
+8848ff737b39	keyboard_input	auto	keyboard_public_workaround	boxed I how-to
+dc363ce77606	accessories	escalate	accessory_diagnostics	Watch spontaneously called 911 — safety
+1c3b9ac7f905	how_to_feature	auto	howto_public	how to stop iOS update nag; Apple answered (install to dismiss)
+d7fca21687bb	icloud_data	escalate	data_loss	songs missing after update
+316d2d387f56	account_security	escalate	account_recovery	verification code to inactive phone
+493925dcfe4c	icloud_data	escalate	data_loss	froze + paid iCloud + notes deleted
+50d42fd36732	hardware	escalate	hardware_service	screen streaks / discoloration
+38262803ea83	account_security	escalate	already_tried	Apple ID + devices, 4 hours in store
+b73b1b3925ff	software_update_bug	escalate	update_bug_intake	camera crash + freeze on 7
+bb11b7338bb6	icloud_data	escalate	data_loss	songs gone after update
+79bdce66896a	other	escalate	insufficient_context	churn threat, no concrete symptom
+4c1d6a4ad4db	connectivity	auto	control_center_explainer	Wi-Fi CC vs Settings mismatch — Apple said expected
+692b16f7de27	battery_power	escalate	battery_intake	97 to 65 in 50 min
+bbf50ab504d0	language_unsupported	auto	language_portal	Spanish
+75c4c5abbff8	icloud_data	escalate	data_loss	Safari saved pages gone
+1eca801aa48b	billing_purchases	escalate	billing_verify	charged by Apple Music without account
+c7ec04c3ad82	software_update_bug	escalate	update_bug_intake	phone freezing from new update
+6c8746e6fd22	battery_power	escalate	battery_intake	100 to 65 on commute
+58c094784f61	keyboard_input	auto	keyboard_public_workaround	how to fix I️
+7fa7ffafe2b5	connectivity	escalate	update_bug_intake	losing cellular + Wi-Fi turning on
+3fcf993b7674	icloud_data	escalate	already_tried	iCloud tabs still broken after steps
+d39aaa8e06ad	macos	escalate	macos_diagnostics	High Sierra bricked MacBook Pro
+0470e676dba4	account_security	escalate	already_tried	lost iCloud account after days of calls
+6af36d260e7b	how_to_feature	escalate	insufficient_context	duplicate ringtones; needs device/screenshot follow-up
+8671b86c8121	battery_power	escalate	battery_intake	new phone unusable after iOS 11
+d091854e12fe	connectivity	escalate	already_tried	Wi-Fi range issue after 11.0.3, steps failed
+129d8c534c5a	how_to_feature	escalate	insufficient_context	app switcher layout; screenshot-dependent
+a1420a0d64e3	keyboard_input	auto	keyboard_public_workaround	letter I
+bd6a75688805	how_to_feature	auto	howto_public	uninstall iMessage stickers
+829bba9708ca	keyboard_input	auto	keyboard_public_workaround	I️ not working; asked not to reset phone
+fc888746f082	software_update_bug	escalate	already_tried	8 Plus reboot loop after factory reset
+0d92a79e7c6c	keyboard_input	auto	keyboard_public_workaround	box symbols on I
+0e1e2c313e13	battery_power	escalate	battery_intake	iPhone 7 drain
+25571abdaf8c	keyboard_input	auto	keyboard_public_workaround	I️ I️ how do I fix
+9aa95ecd9a22	accessories	auto	feature_feedback	Watch battery gen comparison — spec question
+45ee6f0566df	hardware	escalate	update_bug_intake	iPhone X notch vs 3D Touch platter
+29d16946e2d1	language_unsupported	auto	language_portal	Spanish keyboard
+c7469d7871f0	software_update_bug	escalate	insufficient_context	fix glitches — no symptom
+345f78ffeb31	battery_power	escalate	battery_intake	iPhone 6 drain + crash
+0732aa3b0b3d	how_to_feature	auto	howto_public	battery % on iPhone X; Apple sent how-to
+961b8905f297	software_update_bug	escalate	already_tried	Phone app blank; mid-thread but they state the symptom
+076224269eea	accessories	auto	howto_public	Watch messages show numbers not names; Apple gave restart article
+9a6ce53ba30d	icloud_data	escalate	data_loss	all photos/videos wiped on 11.1
+58bfec8e45c7	software_update_bug	escalate	update_bug_intake	moving apps glitchy
+8de123d2aa58	icloud_data	escalate	data_loss	photos after 2014 gone from Camera Roll
+3da61e319784	billing_purchases	escalate	billing_verify	purchase pending / already purchased
+4a0fbe7baa5e	how_to_feature	auto	howto_public	how to unblock numbers reported as spam
+9e96a02f4374	connectivity	escalate	update_bug_intake	loses Wi-Fi after sleep
+0a74952a3827	billing_purchases	auto	sales_pointer	Beats promo Apple Music months in India
+177b2a420ca7	software_update_bug	escalate	update_bug_intake	new iPhone X stuck on 11.1.2 verify
+9dd88851dea1	hardware	escalate	update_bug_intake	camera restrictions after update
+1330eed83874	battery_power	escalate	battery_intake	6s battery vs Watch; considering switch
+d4b689d1657a	keyboard_input	auto	keyboard_public_workaround	I️ on Facebook
+14b6b722b9ca	how_to_feature	auto	howto_public	Apple Pay Cash availability; Apple answered rollout timing
+8ee186b94be5	accessories	escalate	accessory_diagnostics	Watch notifications after update
+cc4339d72c83	language_unsupported	auto	language_portal	Portuguese iCloud login
+5b5a2876c2a6	other	auto	feature_feedback	iTunes movie request
+220221051599	how_to_feature	auto	howto_public	iPhone X add contact Save button under notch
+21f81308594f	account_security	escalate	account_recovery	Apple ID locked, no email access — Apple gave article BUT recovery is still high-stakes
+e141086c0f92	macos	escalate	macos_diagnostics	keyboard shortcut focus
+635603b25cf5	connectivity	auto	control_center_explainer	want to fully turn off Wi-Fi from CC
+8872ddd06c2e	billing_purchases	escalate	billing_verify	App Store cannot update/download
+89c05ce715f9	account_security	escalate	account_recovery	Activation Lock + forgotten password
+991848ef8a44	icloud_data	escalate	data_loss	iCloud Music cannot download offline
+efcdd4a61a15	macos	escalate	macos_diagnostics	High Sierra install rolled back
+bfcb6bd7c63f	how_to_feature	auto	howto_public	alarm vs silent mode — Apple misfired phishing article; gold is the how-to
+eb1aa3b22d44	hardware	escalate	hardware_service	4-day-old MacBook Pro keys failing
+997726865f9b	other	auto	sales_pointer	online order email never arrived
+fa496fb3db5a	battery_power	escalate	battery_intake	iPhone 7 drain after iOS 11
+65516158cb66	accessories	escalate	accessory_diagnostics	BT audio skipping on bike with new iPhone X
+70e093041ec9	language_unsupported	auto	language_portal	Italian heat/battery
+3962dca7c1ac	accessories	escalate	billing_verify	Beats 3 replaced then dead, wants refund
+3032f3848b71	hardware	escalate	already_tried	still charging screen after steps
+68d4edd33532	battery_power	escalate	battery_intake	garbage battery after update
+4974c0c50a4a	software_update_bug	escalate	update_bug_intake	Photos app white screen freeze
+eb1d7f8d793f	icloud_data	escalate	already_tried	iCloud storage mismatch after previous tweet
+49700d9e70b7	account_security	escalate	account_recovery	verification code to broken-screen phone for Genius Bar
+99a251c6c4ee	connectivity	escalate	update_bug_intake	Bluetooth pairing strangers in public
+aea94778085d	software_update_bug	escalate	already_tried	upgrade freeze at press home
+e978d716386b	accessories	escalate	billing_verify	lost AirPods charger, asking replacement
+597333b4a78c	connectivity	auto	control_center_explainer	Wi-Fi widget does not really turn off
+43a7ec49b235	software_update_bug	escalate	update_bug_intake	freezing since update
+6dd4a05de1f3	language_unsupported	auto	language_portal	Arabic + English mix; Apple still language-routed historically, but they also asked a diagnostic. Gold: language portal matches brand policy on this channel.
+528177134fda	accessories	escalate	accessory_diagnostics	AirPods + Watch BT routing on beta
+0e98430eec16	icloud_data	escalate	billing_verify	family iCloud storage plan still shows 2TB after downgrade
+2001754f7348	software_update_bug	escalate	insufficient_context	give me old iOS back; rant
+1d1a1434f0b3	software_update_bug	escalate	already_tried	WhatsApp notifications after iOS 11, reinstalled
+b75636a2d964	billing_purchases	escalate	already_tried	ex-spouse account / dozens of calls
+f7450e8dabdf	software_update_bug	escalate	update_bug_intake	12 crashes in 15 min
+24fcf5894eab	battery_power	escalate	battery_intake	idle drain after iOS 11
+9e00e6623083	language_unsupported	auto	language_portal	Russian iCloud mail
+fc7d87a058eb	connectivity	auto	control_center_explainer	stop Wi-Fi always on besides Settings
+9a72bb5fb2a7	icloud_data	auto	howto_public	how to delete game data from iCloud
+3f8169096736	icloud_data	auto	feature_feedback	wants full-res iCloud photo sharing
+9766502f0873	macos	escalate	macos_diagnostics	Handoff stopped after macOS/iOS update
+ec7deb92c870	icloud_data	escalate	data_loss	photos backup to iCloud 24h+
+6fad43727c88	battery_power	escalate	battery_intake	7 Plus battery
+3c275e5c48d5	icloud_data	escalate	data_loss	iCloud Drive files will not download
+a334701da23e	software_update_bug	escalate	update_bug_intake	screen dims, hung texts, call waiting
+4c7423a5f6e7	macos	escalate	macos_diagnostics	MacBook Pro error screenshot
+3f627e1a3f34	battery_power	escalate	battery_intake	battery eaten after iPhone update
+3873211b4878	hardware	escalate	hardware_service	lock screen display issue + screenshot
+83038e79e865	other	escalate	insufficient_context	argumentative mid-thread, no new symptom
+673863120b9a	connectivity	escalate	already_tried	7 Plus Bluetooth, reset/restart done
+0fdd5c3d00c3	accessories	escalate	accessory_diagnostics	Watch contacts not syncing
+94e847a34327	software_update_bug	escalate	already_tried	6 super slow + Watch health sync broken
+bdd783d9af09	battery_power	escalate	battery_intake	iPad battery after 11.1.2
+9ee3a364212b	software_update_bug	escalate	update_bug_intake	blank screenshots + app freeze
+d384295e82a0	other	auto	phishing_public_article	is this email real or spam
+fde599d1f9f7	billing_purchases	escalate	billing_verify	Watch + band extra bank charge
+552604cba6e5	macos	escalate	macos_diagnostics	High Sierra download will not resume
+67791f7618fb	keyboard_input	auto	keyboard_public_workaround	Illuminati symbols = I-character bug
+bf5ca8abf59a	how_to_feature	auto	howto_public	where is screen record
+88c9bb1495cf	macos	escalate	macos_diagnostics	MacBook screen blacks out, music stops
+eaab8c117fa1	other	escalate	insufficient_context	vague follow-up that product is not working
+0bae8175d713	hardware	escalate	hardware_service	iPhone 6 lock screen screenshot
+242e899851d2	account_security	escalate	account_recovery	iCloud locked, forgot security questions
+9ab6df8ab9ad	keyboard_input	auto	already_tried	question mark persists after 11.1.1 — should not auto the same article again
+b4b13cefc776	software_update_bug	escalate	update_bug_intake	deleting emails freezes 8 Plus
+32b44bc1ed05	battery_power	escalate	battery_intake	asks for battery health app; still a battery case
+46a7bbeee32c	account_security	escalate	account_recovery	security questions never answered
+45bfcdc78632	icloud_data	escalate	data_loss	photos not updating to iCloud
+85bf68eaeb38	accessories	escalate	hardware_service	unlink Watch from broken phone + broken crown
+6de2b8508789	software_update_bug	escalate	update_bug_intake	iOS 11 still crawling after 11.1.1
+197fff9142aa	battery_power	escalate	battery_intake	phone turning on/off while charged; weak billing
+27373c6d0666	connectivity	escalate	already_tried	new 8 Plus no Wi-Fi/BT after reset advice
+8dcbb2116d6c	connectivity	escalate	update_bug_intake	BT audio drop every few minutes
+f0634bce9fb6	account_security	escalate	account_recovery	iTunes recovery 23h wait, urgent
+f445a6bec940	keyboard_input	auto	keyboard_public_workaround	I turning into I️
+60dabed274fe	accessories	escalate	accessory_diagnostics	Smart Keyboard cover disconnects
+c4598a782e6c	language_unsupported	auto	language_portal	Spanish Watch rant
+65ba7f622f26	software_update_bug	escalate	update_bug_intake	6s rebooting 6 times
+fb302b0840d9	battery_power	escalate	battery_intake	battery + apps breaking after update
+b04f554e3ec2	software_update_bug	escalate	already_tried	random power off after restore
+19627b39b129	battery_power	escalate	battery_intake	battery trash after update
+5c29812a6853	other	auto	sales_pointer	iPhone X upgrade program; Apple sent Online Sales
+075eb3c36b27	hardware	escalate	hardware_service	screen still cracked with case/protector
+70bfdbb1639b	accessories	auto	feature_feedback	Watch workout Done button UX
+9d9c00b02492	connectivity	auto	control_center_explainer	stops turning Wi-Fi on
+e4a2a5f70aa1	accessories	auto	howto_public	disable raise-to-wake Watch face
+6275ffd981ba	how_to_feature	auto	howto_public	how to take two free iTunes songs
+c013bf8c9444	account_security	auto	howto_public	create Apple ID without credit card — Apple sent public steps
+4a0b152fa783	software_update_bug	escalate	update_bug_intake	wants to roll back to iOS 10
+307597d4f290	keyboard_input	auto	keyboard_public_workaround	I -> A how to fix
+51fbb793e292	language_unsupported	auto	language_portal	Portuguese battery
+b7af04779afd	how_to_feature	auto	howto_public	remove Advanced Mac Cleaner adware; Apple sent uninstall article
+3744a8d955b2	software_update_bug	escalate	insufficient_context	OS 11 buggy as hell, no specific repro
+2d9018105927	battery_power	escalate	battery_intake	fix battery in 11.1
+c347eb7e1f95	battery_power	escalate	battery_intake	will not charge, 4 cables; may be hardware but they blame iOS 11
+d375375e82d6	other	escalate	insufficient_context	what's going on here + screenshot
+c614cb21ff3b	software_update_bug	escalate	update_bug_intake	cannot receive calls on 11.1.1
+325223dc20e9	battery_power	escalate	hardware_service	battery so hot feared bulge — safety/hardware
+51e29f04bce9	accessories	escalate	accessory_diagnostics	cannot update Watch
+f8deebe6c4c4	software_update_bug	escalate	insufficient_context	started after update, screenshot-dependent
+502b1889e92f	accessories	escalate	accessory_diagnostics	scrolling vs Digital Crown / bezel

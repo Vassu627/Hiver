@@ -1,0 +1,1704 @@
+{
+  "n_golden": 231,
+  "systems": {
+    "trivial": {
+      "n": 231,
+      "intent": {
+        "accuracy": 0.039,
+        "macro_f1": 0.006,
+        "per_class": {
+          "keyboard_input": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 17
+          },
+          "battery_power": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 32
+          },
+          "software_update_bug": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 34
+          },
+          "connectivity": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 17
+          },
+          "hardware": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10
+          },
+          "icloud_data": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 19
+          },
+          "billing_purchases": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10
+          },
+          "account_security": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 19
+          },
+          "accessories": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 19
+          },
+          "macos": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 14
+          },
+          "how_to_feature": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 14
+          },
+          "language_unsupported": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 17
+          },
+          "other": {
+            "precision": 0.039,
+            "recall": 1.0,
+            "f1": 0.075,
+            "support": 9
+          }
+        }
+      },
+      "route": {
+        "accuracy": 0.714,
+        "escalate_precision": 0.714,
+        "escalate_recall": 1.0,
+        "escalate_f1": 0.833,
+        "false_auto_count": 0,
+        "false_auto_rate_on_escalate": 0.0,
+        "false_escalate_count": 66,
+        "false_escalate_rate_on_auto": 1.0,
+        "pred_auto_rate": 0.0,
+        "gold_auto_rate": 0.286
+      },
+      "reply_vs_historical_apple": {
+        "mean_tfidf_cosine_vs_apple_reply": 0.047,
+        "median_tfidf_cosine_vs_apple_reply": 0.04
+      },
+      "safety": {
+        "asks_password_rate": 0.0,
+        "handle_leak_rate": 0.0,
+        "stale_ios11_pin_rate": 0.0
+      },
+      "judge": {
+        "mean": {
+          "groundedness": 1.0,
+          "helpfulness": 0.0,
+          "brand_voice": 2.0,
+          "safety": 2.0,
+          "routing_consistency": 1.0,
+          "total": 6.0
+        },
+        "pass_at_7_rate": 0.0,
+        "pass_at_9_rate": 0.0
+      },
+      "intent_confusion": {
+        "account_security": {
+          "other": 19
+        },
+        "keyboard_input": {
+          "other": 17
+        },
+        "battery_power": {
+          "other": 32
+        },
+        "language_unsupported": {
+          "other": 17
+        },
+        "macos": {
+          "other": 14
+        },
+        "accessories": {
+          "other": 19
+        },
+        "billing_purchases": {
+          "other": 10
+        },
+        "icloud_data": {
+          "other": 19
+        },
+        "connectivity": {
+          "other": 17
+        },
+        "software_update_bug": {
+          "other": 34
+        },
+        "hardware": {
+          "other": 10
+        },
+        "how_to_feature": {
+          "other": 14
+        },
+        "other": {
+          "other": 9
+        }
+      },
+      "failures": [
+        {
+          "id": "654b9eaf1c74",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@115858 fix these damn question marks shit is mad annoying",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "e340e2eb7bda",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@115858 cu\u00e1ndo vais a dar soluci\u00f3n a los problemas de bater\u00eda con iOS11? Estoy desesperado.",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "3eb72d112708",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport I\ufe0f got this stupid question mark box bug before I\ufe0f even updated to iOS 11.1 so what the heck.",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "31d588884a5b",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@662650 @662651 @AppleSupport \u0627\u0644\u0633\u0644\u0627\u0645 \u0639\u0644\u064a\u0643\u0645 \u0627\u062e\u0648\u064a \u0645\u062d\u0645\u062f \u0639\u0646\u062f\u064a \u0645\u0634\u0643\u0644\u0629 \u0639\u064a\u0627 \u064a\u062d\u062f\u062b \u0645\u0639\u064a https://t.co/FM4wOQKRBY",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "bf6d97887ac5",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Why does this keep happening to me @AppleSupport please help lol I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f I\ufe0f",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "aba0b66ae8e7",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "First the whole \u201cI\u201d thing now autocorrecting it to I.T fuck man @115858 get your shit together",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "5117b064d82a",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@372519 \u0634\u0647\u0631\u064a\u0646 \u0645\u0646 \u0627\u062e\u0631 \u062a\u062d\u062f\u064a\u062b \u0627\u0644\u0645\u0646\u064a\u0643\u0629 \u0627\u0644\u064a \u0639\u0627\u0645\u0644\u064a\u0646\u0647\u0627 \u0641\u064a \u062a\u0644\u064a\u0641\u0648\u0646\u0627\u062a\u0646\u0627\n@AppleSupport https://t.co/ruYz3dk7S8",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "b5fa7a42e1b1",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport I can't find a hard case for my MacBook Pro touch bar which is 13'3 inch. All the hard cases are 13 inch.. can u help me?",
+          "gold_intent": "macos",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Sales/fulfillment (case, order email, upgrade program). Public pointer to Online Sales is enough to auto-send.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "65469cb0ef95",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport @115858 \n\nEverything i try to put in the letter \u201cI \u201c this substitutes and I\ufe0f get a weird charcter instead... \nAny tips? https://t.co/lycOdF1osv",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "9994762fc5e7",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport no puedo conectarme a la @12228 desde hace algunos d\u00edas. No es por la conexi\u00f3n, ya que las dem\u00e1s app me funcionan bien.",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "722caba0215f",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport Hi. If I sign out from my Apple ID on my iPhone, would I loose any data?",
+          "gold_intent": "account_security",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "b6e237a0dee6",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Meu, to tendo problema com o wifi, n sei se o problema \u00e9 o iOS 11 ou o iphone 8 @AppleSupport help me",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "19be4d46d871",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "La actualizaci\u00f3n de @115858 me tiene s\u00faper descontenta, solo se traba mi cel \ud83d\ude21 #ios11update",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "114d9a55c9af",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@115858 el iOS11.2 es horrible, est\u00e1 lentis\u00edmo y la bater\u00eda se agota demasiado rapidooooooo \ud83d\ude21\ud83d\ude21",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "41eb70eaff90",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport ever since I updated to iOS11.1.1, I can no longer screenshot on iPhone X. Any solutions?",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "72f4fa06842b",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Honestly, @115858 I\u2019m not understanding these new autocorrects  that are popping up suddenly. Fix I.T please! \ud83e\udd26\ud83c\udffd\u200d\u2640\ufe0f",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "5881345ffe71",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@681228 @AppleSupport \u0627\u0644\u0645\u0634\u0643\u0644\u0629 \u0645\u0627\u0632\u0627\u0644\u062a \u0645\u0648\u062c\u0648\u062f\u0629 \u062d\u062a\u0649 \u0641\u064a \u0627\u0644\u0627\u0635\u062f\u0627\u0631 \u0627\u0644\u062c\u062f\u064a\u062f \n\u0627\u0644\u062d\u0644 \u0627\u0644\u0648\u062d\u064a\u062f \u062d\u0627\u0644\u064a\u0627 \u0647\u0648 \u0627\u0646 \u062a\u0628\u0642\u0649 \u0639\u0644\u0649 \u0661\u0661.\u0660.\u0663 \u0627\u0644\u0649 \u0627\u0646 \u064a\u062a\u0645 \u062d\u0644 \u0645\u0634\u0643\u0644\u0629 \u0646\u0647\u0627\u0626\u064a\u0627",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "fecd60528a9b",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport Exactly that\u2019s what I\u2019m asking !! Why this cumbersome way when the previous one was simpler and efficient ? \nThis \u2018work differently now\u2019 also consumes more battery as BT and WiFi stay ON even if a user turns them off from the Cntrl Cntr.",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Feature request / comparison question, not a broken device. Apple pointed at the feedback page or a spec sheet.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "2e75c05c207e",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport Bluetooth enabled but not connected to any of three as they are off.  Symbol highlighted like it is connected.  Should be light shaded.",
+          "gold_intent": "connectivity",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Wi-Fi/Bluetooth Control Center 'doesn't really turn off' is expected iOS 11 behavior Apple explained publicly.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "01abfd92e27a",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport \u65e5\u672c\u306e\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u3067iphone X\u3000256GB\u3000SG\u309216\u66421\u5206\u306b\u4e88\u7d04\u3057\u305f\u304c\u3001\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u3067\u306f16\u6642\u3088\u308a\u524d\u306b\u4e88\u7d04\u3092\u7279\u5b9a\u306e\u30e6\u30fc\u30b6\u30fc\u306e\u307f\u4e88\u7d04\u3092\u53d7\u3051\u4ed8\u3051\u3066\u3044\u305f\u3002\u3053\u308c\u306fapple\u304c\u8a31\u53ef\u3057\u3066\u3044\u305f\u306e\u304b\uff1f\u306a\u305c\u305d\u3093\u306a\u3053\u3068\u304c\u8d77\u304d\u308b\u306e\u304b\u8abf\u67fb\u3057\u3001\u30bd\u30d5\u30c8\u30d0\u30f3\u30af\u306b\u30da\u30ca\u30eb\u30c6\u30a3\u3092\u3057\u3066\u304f\u3060\u3055\u3044\u3002",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "8848ff737b39",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport how can I\ufe0f get rid of the A boxed ? For I\ufe0f",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "1c3b9ac7f905",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport how do I switch off iOS update notification? \nThey are enjoying. I decide when I want to update!",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "4c1d6a4ad4db",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@115858 @AppleSupport Guys, There is a bug in IOS version 11.1.2.When you turn off your Wifi from the control center, it does not turn off it from settings Wi-Fi.But the other way works fine.Is it reported?",
+          "gold_intent": "connectivity",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Wi-Fi/Bluetooth Control Center 'doesn't really turn off' is expected iOS 11 behavior Apple explained publicly.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "bbf50ab504d0",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Queridos amigos de @AppleSupport  sus actualizaciones convierten mi \ud83d\udcf1 en una fucking \ud83d\udc22 qu\u00e9 piensan hacer al respecto?",
+          "gold_intent": "language_unsupported",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Non-English. Apple's historical public move was a canned language-portal redirect, not in-thread troubleshooting.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        },
+        {
+          "id": "58c094784f61",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport I\ufe0f don\u2019t know how to fix this I\ufe0f thing and I\ufe0f need help plz",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Known iOS 11 I/question-mark bug. Apple repeatedly sent a public workaround; a first reply can auto-send that article.",
+          "pred_reason": "Trivial baseline always escalates with a canned apology.",
+          "reply": "We're sorry you're having trouble. Please contact Apple Support and we'll be happy to help."
+        }
+      ]
+    },
+    "copy_nearest": {
+      "n": 231,
+      "intent": {
+        "accuracy": 0.476,
+        "macro_f1": 0.475,
+        "per_class": {
+          "keyboard_input": {
+            "precision": 0.381,
+            "recall": 0.471,
+            "f1": 0.421,
+            "support": 17
+          },
+          "battery_power": {
+            "precision": 0.938,
+            "recall": 0.469,
+            "f1": 0.625,
+            "support": 32
+          },
+          "software_update_bug": {
+            "precision": 0.478,
+            "recall": 0.324,
+            "f1": 0.386,
+            "support": 34
+          },
+          "connectivity": {
+            "precision": 0.611,
+            "recall": 0.647,
+            "f1": 0.629,
+            "support": 17
+          },
+          "hardware": {
+            "precision": 0.308,
+            "recall": 0.4,
+            "f1": 0.348,
+            "support": 10
+          },
+          "icloud_data": {
+            "precision": 0.438,
+            "recall": 0.368,
+            "f1": 0.4,
+            "support": 19
+          },
+          "billing_purchases": {
+            "precision": 0.364,
+            "recall": 0.4,
+            "f1": 0.381,
+            "support": 10
+          },
+          "account_security": {
+            "precision": 0.762,
+            "recall": 0.842,
+            "f1": 0.8,
+            "support": 19
+          },
+          "accessories": {
+            "precision": 0.889,
+            "recall": 0.421,
+            "f1": 0.571,
+            "support": 19
+          },
+          "macos": {
+            "precision": 0.462,
+            "recall": 0.429,
+            "f1": 0.444,
+            "support": 14
+          },
+          "how_to_feature": {
+            "precision": 0.185,
+            "recall": 0.357,
+            "f1": 0.244,
+            "support": 14
+          },
+          "language_unsupported": {
+            "precision": 0.933,
+            "recall": 0.824,
+            "f1": 0.875,
+            "support": 17
+          },
+          "other": {
+            "precision": 0.036,
+            "recall": 0.111,
+            "f1": 0.054,
+            "support": 9
+          }
+        }
+      },
+      "route": {
+        "accuracy": 0.554,
+        "escalate_precision": 0.83,
+        "escalate_recall": 0.473,
+        "escalate_f1": 0.602,
+        "false_auto_count": 87,
+        "false_auto_rate_on_escalate": 0.527,
+        "false_escalate_count": 16,
+        "false_escalate_rate_on_auto": 0.242,
+        "pred_auto_rate": 0.593,
+        "gold_auto_rate": 0.286
+      },
+      "reply_vs_historical_apple": {
+        "mean_tfidf_cosine_vs_apple_reply": 0.112,
+        "median_tfidf_cosine_vs_apple_reply": 0.035
+      },
+      "safety": {
+        "asks_password_rate": 0.0,
+        "handle_leak_rate": 0.0,
+        "stale_ios11_pin_rate": 0.0
+      },
+      "judge": {
+        "mean": {
+          "groundedness": 1.481,
+          "helpfulness": 0.792,
+          "brand_voice": 1.996,
+          "safety": 1.996,
+          "routing_consistency": 1.165,
+          "total": 7.429
+        },
+        "pass_at_7_rate": 0.753,
+        "pass_at_9_rate": 0.268
+      },
+      "intent_confusion": {
+        "account_security": {
+          "account_security": 16,
+          "other": 1,
+          "icloud_data": 1,
+          "how_to_feature": 1
+        },
+        "keyboard_input": {
+          "other": 3,
+          "keyboard_input": 8,
+          "how_to_feature": 5,
+          "software_update_bug": 1
+        },
+        "battery_power": {
+          "battery_power": 15,
+          "keyboard_input": 1,
+          "billing_purchases": 3,
+          "how_to_feature": 2,
+          "software_update_bug": 3,
+          "other": 6,
+          "language_unsupported": 1,
+          "hardware": 1
+        },
+        "language_unsupported": {
+          "language_unsupported": 14,
+          "icloud_data": 1,
+          "other": 1,
+          "software_update_bug": 1
+        },
+        "macos": {
+          "software_update_bug": 1,
+          "macos": 6,
+          "account_security": 1,
+          "other": 1,
+          "hardware": 2,
+          "how_to_feature": 2,
+          "connectivity": 1
+        },
+        "accessories": {
+          "other": 2,
+          "accessories": 8,
+          "hardware": 1,
+          "software_update_bug": 1,
+          "billing_purchases": 1,
+          "connectivity": 2,
+          "icloud_data": 2,
+          "how_to_feature": 1,
+          "keyboard_input": 1
+        },
+        "billing_purchases": {
+          "other": 2,
+          "billing_purchases": 4,
+          "icloud_data": 1,
+          "accessories": 1,
+          "account_security": 1,
+          "macos": 1
+        },
+        "icloud_data": {
+          "icloud_data": 7,
+          "other": 3,
+          "how_to_feature": 3,
+          "account_security": 2,
+          "macos": 2,
+          "software_update_bug": 1,
+          "keyboard_input": 1
+        },
+        "connectivity": {
+          "other": 1,
+          "connectivity": 11,
+          "how_to_feature": 1,
+          "keyboard_input": 2,
+          "software_update_bug": 1,
+          "icloud_data": 1
+        },
+        "software_update_bug": {
+          "software_update_bug": 11,
+          "hardware": 4,
+          "keyboard_input": 6,
+          "billing_purchases": 2,
+          "how_to_feature": 4,
+          "other": 4,
+          "battery_power": 1,
+          "connectivity": 1,
+          "icloud_data": 1
+        },
+        "hardware": {
+          "hardware": 4,
+          "other": 1,
+          "how_to_feature": 2,
+          "macos": 1,
+          "software_update_bug": 1,
+          "connectivity": 1
+        },
+        "how_to_feature": {
+          "software_update_bug": 1,
+          "connectivity": 1,
+          "how_to_feature": 5,
+          "other": 2,
+          "macos": 1,
+          "account_security": 1,
+          "hardware": 1,
+          "keyboard_input": 1,
+          "billing_purchases": 1
+        },
+        "other": {
+          "other": 1,
+          "software_update_bug": 1,
+          "macos": 2,
+          "how_to_feature": 1,
+          "icloud_data": 2,
+          "keyboard_input": 1,
+          "connectivity": 1
+        }
+      },
+      "failures": [
+        {
+          "id": "b57589d941f3",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "IM SICK OF THIS SHIT @115858!!  WHY IS MY PHONE ALWAYS DYING?? WHY HAVENT YOU FIGURED OUT HOW TO SELF CHARGE THE IPHONE?! https://t.co/JfJM8sdeLN",
+          "gold_intent": "battery_power",
+          "pred_intent": "keyboard_input",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Battery drain after an OS update was almost never closed in public. Needs model + iOS + a specialist.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Here\u2019s what you can do to work around the issue until it\u2019s fixed in a future software update: https://t.co/xXaXeeSRt9"
+        },
+        {
+          "id": "1d5519090cd1",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Hey @AppleSupport just got some new AirPods and the right one doesn\u2019t play...any thoughts?",
+          "gold_intent": "accessories",
+          "pred_intent": "other",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Watch/AirPods hardware or pairing. Apple asked for watchOS/iOS versions or moved to DM.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Alright, do you have access to another device we can test with the EarPods? This will help us isolate the issue."
+        },
+        {
+          "id": "9f971760dd50",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport I've already contacted them 4x since monday. They enable my apple Id and later the same keeps getting disabled",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Customer already exhausted first-line steps. Another canned loop should not auto-send.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We recommend contacting our Apple ID experts; as they can verify the account identity. Reach them here: https://t.co/UJm15vmMM2"
+        },
+        {
+          "id": "df52a79d62b4",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport My Iphone is disabled and I've tried everything on the internet to fix it. I erased it from icloud and my apple id. Help.",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Apple ID, 2FA, Activation Lock, or disabled device. A wrong auto-reply can lock someone out; human-owned.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We'd love to help. For security reasons, reach out to us here: https://t.co/UJm15vmMM2"
+        },
+        {
+          "id": "07508c91eeb5",
+          "issues": [
+            "route"
+          ],
+          "text": "Hey @AppleSupport what\u2019s the deal?!? Why the hell should I reset my Apple Watch to pair with my new iPhone? There\u2019s GOT to be another way. Really don\u2019t want to reset my watch guys... https://t.co/cgNx4jCSIW",
+          "gold_intent": "accessories",
+          "pred_intent": "accessories",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Watch/AirPods hardware or pairing. Apple asked for watchOS/iOS versions or moved to DM.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Congratulations on your new iPhone! Let's look into this together. Let us know if this article helps: https://t.co/6fnV3HF4R3"
+        },
+        {
+          "id": "ae5ab3ca2ec9",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport my icloud music library has been \"temporarily unavailable\" on my iphone for over a year now \ud83c\udf7e\ud83c\udf89",
+          "gold_intent": "icloud_data",
+          "pred_intent": "icloud_data",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Photos, notes, songs, or iCloud data may be gone. Do not auto-send wipes or guesses.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We've got you. Is this still happening after restarting and trying with different Wi-Fi networks? Let's also get your iOS version. That'll help us get started."
+        },
+        {
+          "id": "c46760e8454c",
+          "issues": [
+            "route"
+          ],
+          "text": ". @AppleSupport  Did simultaneous upgrades to #ios11 &amp; now locked out of verifying them for #2la.  What\u2019s lost if I reset #icloud on each?",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Apple ID, 2FA, Activation Lock, or disabled device. A wrong auto-reply can lock someone out; human-owned.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer For the best assistance with your Apple ID, and resetting your security questions, please reach out directly to our Apple ID Advisors here: https://t.co/UJm15vmMM2"
+        },
+        {
+          "id": "6c7600bb76fa",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport  app store downloads have been impossibly slow for the last week since iOS11 &amp; I mean impossible",
+          "gold_intent": "software_update_bug",
+          "pred_intent": "software_update_bug",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Crashes/freezes/boot loops after an update need repro details. Public canned replies did not fix these.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Let's work on this together. Are you noticing this issue with your notifications on all apps or just the one in the screenshot?"
+        },
+        {
+          "id": "4fc901a54ded",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@214420 @AppleSupport My phone and been a POS since the last OS \u201cupgrade\u201d. Random freeze ups and restarts.",
+          "gold_intent": "software_update_bug",
+          "pred_intent": "hardware",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Crashes/freezes/boot loops after an update need repro details. Public canned replies did not fix these.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We know how important it is to get your phone up and running. To start, can you tell us which iPhone you're using?"
+        },
+        {
+          "id": "098c9e9a1006",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "So the new AirPods aren\u2019t working!!! @AppleSupport",
+          "gold_intent": "accessories",
+          "pred_intent": "hardware",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Watch/AirPods hardware or pairing. Apple asked for watchOS/iOS versions or moved to DM.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Let's see if we can help with this. Check out our article https://t.co/o7nB3pXfMv for steps to take on an iPhone 8 when it won't respond, let us know if that helps."
+        },
+        {
+          "id": "885fa85ea7cd",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Just lost 55% battery in an hour of usage. The iOS update is making me regret ever getting an iPhone. @115858",
+          "gold_intent": "battery_power",
+          "pred_intent": "how_to_feature",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Battery drain after an OS update was almost never closed in public. Needs model + iOS + a specialist.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Battery life is important, and we\u2019ll be happy to help. First, which iOS 11 version are you using? The latest is 11.0.2."
+        },
+        {
+          "id": "a02c0cfb0f30",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport No, I'm not. It asks for the verification code and I don't have that phone number anymore.",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Apple ID, 2FA, Activation Lock, or disabled device. A wrong auto-reply can lock someone out; human-owned.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Congratulations on your new iPhone! Let's look into this together. Let us know if this article helps: https://t.co/HjqkFeFUwW"
+        },
+        {
+          "id": "9b3a7b4ebe7b",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport annoyed by my iPhone 7 and it\u2019s inability to connect to Blue Tooth and WiFi at times #Frustrating",
+          "gold_intent": "connectivity",
+          "pred_intent": "connectivity",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Crashes/freezes/boot loops after an update need repro details. Public canned replies did not fix these.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Wi-Fi and Bluetooth toggles work a bit differently in iOS 11. This article has more information: https://t.co/vzVz37Hb6q"
+        },
+        {
+          "id": "a8b035c32179",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport No, as I said in my original tweet, I've tried to update my payment details but the website won't let me and I can't do it on my phone. Keeps declining the new card. Will iTunes Store be able to help with AppleID payment details l update?",
+          "gold_intent": "billing_purchases",
+          "pred_intent": "billing_purchases",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Money movement (charge, refund, pending purchase). Must be checked against the Apple ID by a human.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Let's get you to the right place to get that resolved. Try following the troubleshooting steps in this article: https://t.co/U96y4MTG7k That should get you all taken care of."
+        },
+        {
+          "id": "e95254fe9af3",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport The screen is cracked on the top, top left corner and the side of the button on the right",
+          "gold_intent": "hardware",
+          "pred_intent": "hardware",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Physical damage or likely hardware/service. Needs region/warranty; Apple collected that privately.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We're sorry to hear that. Check your warranty status, repair pricing, and repair options visit: https://t.co/nCtMNlEGjF"
+        },
+        {
+          "id": "cc0ef78e103b",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Dear @AppleSupport @115858, this is the iOS 11 camera on the iPhone 6s Plus. https://t.co/J1VtO0Y36m",
+          "gold_intent": "hardware",
+          "pred_intent": "other",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Crashes/freezes/boot loops after an update need repro details. Public canned replies did not fix these.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Thank you. Which iOS version is installed? You can find this by going to Settings &gt; General &gt; About."
+        },
+        {
+          "id": "e70160d07577",
+          "issues": [
+            "route"
+          ],
+          "text": "@115858 really does suck. These updates have resulted in battery death like no other, 21% - 4% in 3mins while turned off. And $2k for an average looking new model? \ud83d\ude44 done now.",
+          "gold_intent": "battery_power",
+          "pred_intent": "battery_power",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Battery drain after an OS update was almost never closed in public. Needs model + iOS + a specialist.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We'd be happy to look into what's going on. Which device and iOS version are you using?"
+        },
+        {
+          "id": "88948117ac9a",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport no I dont think so, they were just normal contacts on my phone. Now they are all gone and it says \u2018maybe.....\u2019",
+          "gold_intent": "icloud_data",
+          "pred_intent": "icloud_data",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Photos, notes, songs, or iCloud data may be gone. Do not auto-send wipes or guesses.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Help is here! When did you notice this behavior? Have you recently updated your device?"
+        },
+        {
+          "id": "9e71e4c055aa",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport please why does my phone ask for my Apple ID almost every time I want to open an app and then crash",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Apple ID, 2FA, Activation Lock, or disabled device. A wrong auto-reply can lock someone out; human-owned.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We're here to help! Yep, that's phishing! Learn more and report it here: https://t.co/LNMCdqt6fD"
+        },
+        {
+          "id": "f5d940d02013",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport having issues with the App Store need assistance and you https://t.co/5PtYEuE6ES is having log in issues",
+          "gold_intent": "billing_purchases",
+          "pred_intent": "billing_purchases",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Money movement (charge, refund, pending purchase). Must be checked against the Apple ID by a human.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Let's look into this. Have you tried changing networks and  loading the Updates page or using cellular data?"
+        },
+        {
+          "id": "170cb80a2142",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport @115858 App Store app badge shows \u201c5\u201d but I tap it and go to updates- no updates. Hasn\u2019t worked right since iOS10. #iOS11 #WTF",
+          "gold_intent": "software_update_bug",
+          "pred_intent": "billing_purchases",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Crashes/freezes/boot loops after an update need repro details. Public canned replies did not fix these.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Thanks for taking the time to reach out. Yes, that notification is from Apple."
+        },
+        {
+          "id": "bc2892b5294d",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport 2/2-- I have tried uninstalling and reinstalling iTunes. Does not work. I have rebooted my computer as well. How to fix this?",
+          "gold_intent": "macos",
+          "pred_intent": "other",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Customer already exhausted first-line steps. Another canned loop should not auto-send.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer We'd love to help you out! Could you tell us a bit about the trouble you're having?"
+        },
+        {
+          "id": "17e5e8be37df",
+          "issues": [
+            "route"
+          ],
+          "text": "This is why i dont link my credit card to the app store. Can you unlock my account now @AppleSupport ? https://t.co/0kQbc8SAO8",
+          "gold_intent": "billing_purchases",
+          "pred_intent": "billing_purchases",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Money movement (charge, refund, pending purchase). Must be checked against the Apple ID by a human.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer Does this happen on both a Wi-Fi and cellular data connection? Also, what's the exact iOS version?"
+        },
+        {
+          "id": "9d54840d0c5d",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Umm @115858 fix iOS11.2 beta because now I\u2019m not hearing my notifications as they come.",
+          "gold_intent": "software_update_bug",
+          "pred_intent": "how_to_feature",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Crashes/freezes/boot loops after an update need repro details. Public canned replies did not fix these.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer That's a great question! Here's a great article to help get you started: https://t.co/E7sMv2aXe6"
+        },
+        {
+          "id": "96c4da7f8eb5",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "So, i fully charged my iphone 7 plus everynight, then i woke up and i have like 15%. Why is that? iOS 11? @115858",
+          "gold_intent": "battery_power",
+          "pred_intent": "billing_purchases",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Battery drain after an OS update was almost never closed in public. Needs model + iOS + a specialist.",
+          "pred_reason": "Copied nearest historical Apple reply; routed escalate iff that reply asked for a DM.",
+          "reply": "@customer That's not the experience we want you to have.  Are you updated to iOS 11.0.3?"
+        }
+      ]
+    },
+    "agent": {
+      "n": 231,
+      "intent": {
+        "accuracy": 0.784,
+        "macro_f1": 0.772,
+        "per_class": {
+          "keyboard_input": {
+            "precision": 0.842,
+            "recall": 0.941,
+            "f1": 0.889,
+            "support": 17
+          },
+          "battery_power": {
+            "precision": 0.931,
+            "recall": 0.844,
+            "f1": 0.885,
+            "support": 32
+          },
+          "software_update_bug": {
+            "precision": 0.864,
+            "recall": 0.559,
+            "f1": 0.679,
+            "support": 34
+          },
+          "connectivity": {
+            "precision": 0.895,
+            "recall": 1.0,
+            "f1": 0.944,
+            "support": 17
+          },
+          "hardware": {
+            "precision": 0.636,
+            "recall": 0.7,
+            "f1": 0.667,
+            "support": 10
+          },
+          "icloud_data": {
+            "precision": 0.889,
+            "recall": 0.842,
+            "f1": 0.865,
+            "support": 19
+          },
+          "billing_purchases": {
+            "precision": 0.538,
+            "recall": 0.7,
+            "f1": 0.609,
+            "support": 10
+          },
+          "account_security": {
+            "precision": 0.9,
+            "recall": 0.947,
+            "f1": 0.923,
+            "support": 19
+          },
+          "accessories": {
+            "precision": 0.933,
+            "recall": 0.737,
+            "f1": 0.824,
+            "support": 19
+          },
+          "macos": {
+            "precision": 0.909,
+            "recall": 0.714,
+            "f1": 0.8,
+            "support": 14
+          },
+          "how_to_feature": {
+            "precision": 0.875,
+            "recall": 0.5,
+            "f1": 0.636,
+            "support": 14
+          },
+          "language_unsupported": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 17
+          },
+          "other": {
+            "precision": 0.207,
+            "recall": 0.667,
+            "f1": 0.316,
+            "support": 9
+          }
+        }
+      },
+      "route": {
+        "accuracy": 0.9,
+        "escalate_precision": 0.886,
+        "escalate_recall": 0.988,
+        "escalate_f1": 0.934,
+        "false_auto_count": 2,
+        "false_auto_rate_on_escalate": 0.012,
+        "false_escalate_count": 21,
+        "false_escalate_rate_on_auto": 0.318,
+        "pred_auto_rate": 0.203,
+        "gold_auto_rate": 0.286
+      },
+      "reply_vs_historical_apple": {
+        "mean_tfidf_cosine_vs_apple_reply": 0.072,
+        "median_tfidf_cosine_vs_apple_reply": 0.044
+      },
+      "safety": {
+        "asks_password_rate": 0.0,
+        "handle_leak_rate": 0.0,
+        "stale_ios11_pin_rate": 0.0
+      },
+      "judge": {
+        "mean": {
+          "groundedness": 1.996,
+          "helpfulness": 1.74,
+          "brand_voice": 2.0,
+          "safety": 2.0,
+          "routing_consistency": 1.944,
+          "total": 9.68
+        },
+        "pass_at_7_rate": 1.0,
+        "pass_at_9_rate": 0.926
+      },
+      "intent_confusion": {
+        "account_security": {
+          "account_security": 18,
+          "icloud_data": 1
+        },
+        "keyboard_input": {
+          "keyboard_input": 16,
+          "how_to_feature": 1
+        },
+        "battery_power": {
+          "battery_power": 27,
+          "other": 1,
+          "billing_purchases": 3,
+          "accessories": 1
+        },
+        "language_unsupported": {
+          "language_unsupported": 17
+        },
+        "macos": {
+          "account_security": 1,
+          "macos": 10,
+          "other": 3
+        },
+        "accessories": {
+          "accessories": 14,
+          "other": 4,
+          "billing_purchases": 1
+        },
+        "billing_purchases": {
+          "icloud_data": 1,
+          "account_security": 1,
+          "billing_purchases": 7,
+          "other": 1
+        },
+        "icloud_data": {
+          "icloud_data": 16,
+          "other": 1,
+          "software_update_bug": 1,
+          "hardware": 1
+        },
+        "connectivity": {
+          "connectivity": 17
+        },
+        "software_update_bug": {
+          "software_update_bug": 19,
+          "billing_purchases": 2,
+          "other": 8,
+          "hardware": 3,
+          "keyboard_input": 1,
+          "connectivity": 1
+        },
+        "hardware": {
+          "hardware": 7,
+          "macos": 1,
+          "other": 2
+        },
+        "how_to_feature": {
+          "software_update_bug": 1,
+          "battery_power": 2,
+          "how_to_feature": 7,
+          "other": 3,
+          "keyboard_input": 1
+        },
+        "other": {
+          "other": 6,
+          "software_update_bug": 1,
+          "keyboard_input": 1,
+          "connectivity": 1
+        }
+      },
+      "failures": [
+        {
+          "id": "6af36d260e7b",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport my iPhone is showing duplicate ringtones. How can I remove them? Only some are duplicated. https://t.co/md0LtDcyJs",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "how_to_feature",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Screenshot-only, mid-thread fragment, or too short to act on without the rest of the conversation.",
+          "pred_reason": "A first-contact how-to with a documented setting path can be sent without a specialist.",
+          "reply": "We're here to help. That's a fair how-to question. We see this is on iPhone. Here's the first-line path Apple usually started with on similar how-tos: check Settings > General > About for the exact iOS version, then try the matching Support article for that feature. Closest historical article: https://t.co/I39AyMJNgb"
+        },
+        {
+          "id": "129d8c534c5a",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport hiii every time I close an app my phone goes from showing apps the regular way to showing apps this way. How do I stop this \ud83d\ude2d\ud83d\ude2d https://t.co/yHdJtqloBv",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "how_to_feature",
+          "gold_route": "escalate",
+          "pred_route": "auto",
+          "gold_reason": "Screenshot-only, mid-thread fragment, or too short to act on without the rest of the conversation.",
+          "pred_reason": "A first-contact how-to with a documented setting path can be sent without a specialist.",
+          "reply": "We're here to help. That's a fair how-to question. Here's the first-line path Apple usually started with on similar how-tos: check Settings > General > About for the exact iOS version, then try the matching Support article for that feature. Closest historical article: https://t.co/vodH4madjc"
+        },
+        {
+          "id": "722caba0215f",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport Hi. If I sign out from my Apple ID on my iPhone, would I loose any data?",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Account lockout/recovery can lock someone out of a device. Apple historically moved these to account specialists \u2014 a human must own it.",
+          "reply": "We're here to help. Apple ID / lockout issues need the account-security path, not a public workaround. We see this is on iPhone. Do not post your password or verification codes here. A specialist should take Apple ID recovery (iforgot / account security), which is what Apple did historically. Start with: https://t.co/GDrqU22YpT"
+        },
+        {
+          "id": "41eb70eaff90",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport ever since I updated to iOS11.1.1, I can no longer screenshot on iPhone X. Any solutions?",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "software_update_bug",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Crash/freeze/update regressions need model + iOS version + repro, which is a human-owned intake.",
+          "reply": "We're here to help. A software update shouldn't leave the phone unstable like that. We see this is on iPhone X / iOS 11.1.1. This needs a human-owned next step rather than an auto-send."
+        },
+        {
+          "id": "fecd60528a9b",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport Exactly that\u2019s what I\u2019m asking !! Why this cumbersome way when the previous one was simpler and efficient ? \nThis \u2018work differently now\u2019 also consumes more battery as BT and WiFi stay ON even if a user turns them off from the Cntrl Cntr.",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "battery_power",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Feature request / comparison question, not a broken device. Apple pointed at the feedback page or a spec sheet.",
+          "pred_reason": "Battery drain after an OS update was Apple's most common DM case. Public tweets rarely resolved it.",
+          "reply": "We're here to help. Battery drain like that isn't what we expect from the device. This needs a human-owned next step rather than an auto-send. To start, send device model and exact iOS version (Settings > General > About). Related article from similar resolved threads: https://t.co/G7BHuQnDS6"
+        },
+        {
+          "id": "2e75c05c207e",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport Bluetooth enabled but not connected to any of three as they are off.  Symbol highlighted like it is connected.  Should be light shaded.",
+          "gold_intent": "connectivity",
+          "pred_intent": "connectivity",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Wi-Fi/Bluetooth Control Center 'doesn't really turn off' is expected iOS 11 behavior Apple explained publicly.",
+          "pred_reason": "Persistent radio issues are not the Control Center explainer. Apple usually collected diagnostics.",
+          "reply": "We're here to help. Let's sort out the Wi-Fi/Bluetooth behavior. This needs a human-owned next step rather than an auto-send. To start, send device model and exact iOS version (Settings > General > About). Related article from similar resolved threads: https://t.co/Ui1yTnOCUz"
+        },
+        {
+          "id": "bd6a75688805",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport how to uninstall stickers? Only option is 2 disable them in the message app but they are still visible even after disabling. \ud83d\ude2c",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Issue is not covered by a public, deterministic playbook, so a human should review the draft before send.",
+          "reply": "We're here to help. We want to make sure we understand the issue before we change anything on the device. This needs a human-owned next step rather than an auto-send. To start, send device model."
+        },
+        {
+          "id": "9aa95ecd9a22",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport Are the Apple watches' batteries of generation 1 to series 3 equally made or different and improved in durability? #thx",
+          "gold_intent": "accessories",
+          "pred_intent": "accessories",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Feature request / comparison question, not a broken device. Apple pointed at the feedback page or a spec sheet.",
+          "pred_reason": "Battery drain after an OS update was Apple's most common DM case. Public tweets rarely resolved it.",
+          "reply": "We're here to help. We can take a look at the Watch/AirPods setup. This needs a human-owned next step rather than an auto-send. To start, send device model. Related article from similar resolved threads: https://t.co/8yjRd1Xo0i"
+        },
+        {
+          "id": "0732aa3b0b3d",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "couldnt agree more.  I hate not seeing battery % on my home screen either!! Fix this please @115858 !! https://t.co/fF1XtAj0XA",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "battery_power",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Issue is not covered by a public, deterministic playbook, so a human should review the draft before send.",
+          "reply": "That's not the experience we want you to have. Battery drain like that isn't what we expect from the device. This needs a human-owned next step rather than an auto-send. To start, send device model and exact iOS version (Settings > General > About). Related article from similar resolved threads: https://t.co/SDIe7UiyJN"
+        },
+        {
+          "id": "076224269eea",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport My Apple Watch is only showing phone numbers in the messaging app now instead of people\u2019s names. What can I do to fix?",
+          "gold_intent": "accessories",
+          "pred_intent": "accessories",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Watch/AirPods hardware or pairing. Apple asked for OS versions or moved to DM.",
+          "reply": "We're here to help. We can take a look at the Watch/AirPods setup. We see this is on Apple Watch. This needs a human-owned next step rather than an auto-send. Apple usually asked for the exact iOS version from Settings > General > About before going further. Related article from similar resolved threads: https://t.co/yARwjq5zwo"
+        },
+        {
+          "id": "0a74952a3827",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport have you stopped giving three months of Apple Music subscription with new beats x or it is just not available in India.",
+          "gold_intent": "billing_purchases",
+          "pred_intent": "billing_purchases",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Sales/fulfillment (case, order email, upgrade program). Public pointer to Online Sales is enough to auto-send.",
+          "pred_reason": "Charges, refunds, and store purchases are account-specific. Auto-sending a generic reply risks the wrong financial action.",
+          "reply": "We're here to help. Charges and store purchases need to be checked against the actual account. A human should check the actual purchase/refund record. Reply with whether the charge appeared on the Apple ID purchase history or only on a bank SMS/email \u2014 Apple asked that before acting."
+        },
+        {
+          "id": "5b5a2876c2a6",
+          "issues": [
+            "route"
+          ],
+          "text": "So @AppleSupport, what will it take to get @35767's Johnny Dangerously on @118721? Please?",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Feature request / comparison question, not a broken device. Apple pointed at the feedback page or a spec sheet.",
+          "pred_reason": "Issue is not covered by a public, deterministic playbook, so a human should review the draft before send.",
+          "reply": "We're here to help. We want to make sure we understand the issue before we change anything on the device. This needs a human-owned next step rather than an auto-send. To start, send device model. Related article from similar resolved threads: https://t.co/8yjRd1Xo0i"
+        },
+        {
+          "id": "997726865f9b",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport and @117735, know you\u2019re fielding a lot of inquiries today, but the email I supposedly was sent never arrived. Help! https://t.co/pVbduAOP6V",
+          "gold_intent": "other",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Sales/fulfillment (case, order email, upgrade program). Public pointer to Online Sales is enough to auto-send.",
+          "pred_reason": "Issue is not covered by a public, deterministic playbook, so a human should review the draft before send.",
+          "reply": "We're here to help. We want to make sure we understand the issue before we change anything on the device. This needs a human-owned next step rather than an auto-send. To start, send device model. Related article from similar resolved threads: https://t.co/LNMCdqt6fD"
+        },
+        {
+          "id": "fc7d87a058eb",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport \nIs there anyway to stop my WiFi from ALWAYS being on besides going into settings and turning it off?",
+          "gold_intent": "connectivity",
+          "pred_intent": "connectivity",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Wi-Fi/Bluetooth Control Center 'doesn't really turn off' is expected iOS 11 behavior Apple explained publicly.",
+          "pred_reason": "Persistent radio issues are not the Control Center explainer. Apple usually collected diagnostics.",
+          "reply": "We're here to help. Let's sort out the Wi-Fi/Bluetooth behavior. This needs a human-owned next step rather than an auto-send. To start, send device model and exact iOS version (Settings > General > About). Related article from similar resolved threads: https://t.co/G7BHuQnDS6"
+        },
+        {
+          "id": "9a72bb5fb2a7",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport how do I delete game data to restart from scratch iv gone into iCloud storage but the game isn\u2019t showing on there",
+          "gold_intent": "icloud_data",
+          "pred_intent": "icloud_data",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Possible data loss. Historical Apple replies asked for library/backup details in a private channel.",
+          "reply": "We're here to help. Your photos, backups, and iCloud data are important \u2014 we don't want to guess here. Because this may be data loss, we should not auto-send a reset. A specialist will ask whether iCloud Photo Library / backup was on, and whether the items still appear in Moments or on icloud.com."
+        },
+        {
+          "id": "3f8169096736",
+          "issues": [
+            "route"
+          ],
+          "text": "@applesupport I would really appreciate it if iCloud photo sharing actually shared the full resolution images with no further compression.",
+          "gold_intent": "icloud_data",
+          "pred_intent": "icloud_data",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Feature request / comparison question, not a broken device. Apple pointed at the feedback page or a spec sheet.",
+          "pred_reason": "Possible data loss. Historical Apple replies asked for library/backup details in a private channel.",
+          "reply": "We're here to help. Your photos, backups, and iCloud data are important \u2014 we don't want to guess here. Because this may be data loss, we should not auto-send a reset. A specialist will ask whether iCloud Photo Library / backup was on, and whether the items still appear in Moments or on icloud.com."
+        },
+        {
+          "id": "bf5ca8abf59a",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "I still want to know why I don\u2019t have this record your screen option @AppleSupport",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Issue is not covered by a public, deterministic playbook, so a human should review the draft before send.",
+          "reply": "We're here to help. We want to make sure we understand the issue before we change anything on the device. This needs a human-owned next step rather than an auto-send. To start, send device model. Related article from similar resolved threads: https://t.co/uQeXsrrlXJ"
+        },
+        {
+          "id": "9ab6df8ab9ad",
+          "issues": [
+            "route"
+          ],
+          "text": "@115858 the question mark keeps appearing. Yes, I updated to iOS 11.1.1\nBye",
+          "gold_intent": "keyboard_input",
+          "pred_intent": "keyboard_input",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Customer already exhausted first-line steps. Another canned loop should not auto-send.",
+          "pred_reason": "Customer already exhausted first-line steps. Another canned troubleshooting loop would waste the thread.",
+          "reply": "This looks like the iOS keyboard/character bug a lot of people hit around this software release. Apple published a public workaround for this and repeatedly pointed people to it while a software fix rolled out. Back up the device, then apply the workaround in that article: https://t.co/xXaXeeSRt9. If you already tried that, we'll have a specialist take the next step \u2014 reply with your exact iOS version (Settings > General > About)."
+        },
+        {
+          "id": "5c29812a6853",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "@AppleSupport Not trying to activate, but \u201cget ready\u201d for iPhone X through the upgrade program. I\u2019ve tried on and off WiFi.",
+          "gold_intent": "other",
+          "pred_intent": "connectivity",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Sales/fulfillment (case, order email, upgrade program). Public pointer to Online Sales is enough to auto-send.",
+          "pred_reason": "Persistent radio issues are not the Control Center explainer. Apple usually collected diagnostics.",
+          "reply": "We're here to help. Let's sort out the Wi-Fi/Bluetooth behavior. We see this is on iPhone X. This needs a human-owned next step rather than an auto-send. To start, send exact iOS version (Settings > General > About). Related article from similar resolved threads: https://t.co/Ui1yTnOCUz"
+        },
+        {
+          "id": "9d9c00b02492",
+          "issues": [
+            "route"
+          ],
+          "text": "YO @115858 \u2014\nCan you please update the new iOS so it stops just turning on my WiFi when I don\u2019t want it on?\n\nty bb \ud83d\ude18\ud83d\ude18",
+          "gold_intent": "connectivity",
+          "pred_intent": "connectivity",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Wi-Fi/Bluetooth Control Center 'doesn't really turn off' is expected iOS 11 behavior Apple explained publicly.",
+          "pred_reason": "Persistent radio issues are not the Control Center explainer. Apple usually collected diagnostics.",
+          "reply": "We're here to help. Let's sort out the Wi-Fi/Bluetooth behavior. This needs a human-owned next step rather than an auto-send. To start, send device model and exact iOS version (Settings > General > About). Related article from similar resolved threads: https://t.co/vzVz37YMv0"
+        },
+        {
+          "id": "e4a2a5f70aa1",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport is there a way to disable this feature on the Apple Watch? Prefer to see my watch face. https://t.co/bLt9tMmRJJ",
+          "gold_intent": "accessories",
+          "pred_intent": "accessories",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Watch/AirPods hardware or pairing. Apple asked for OS versions or moved to DM.",
+          "reply": "We're here to help. We can take a look at the Watch/AirPods setup. We see this is on Apple Watch. This needs a human-owned next step rather than an auto-send. Apple usually asked for the exact iOS version from Settings > General > About before going further. Related article from similar resolved threads: https://t.co/xZKvlmfdD9"
+        },
+        {
+          "id": "6275ffd981ba",
+          "issues": [
+            "intent",
+            "route"
+          ],
+          "text": "Two free songs on #itunes \nHow to take it? @AppleSupport https://t.co/zbnF6E8QOt",
+          "gold_intent": "how_to_feature",
+          "pred_intent": "other",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Issue is not covered by a public, deterministic playbook, so a human should review the draft before send.",
+          "reply": "We're here to help. We want to make sure we understand the issue before we change anything on the device. This needs a human-owned next step rather than an auto-send. To start, send device model. Related article from similar resolved threads: https://t.co/rEEDcjXdhp"
+        },
+        {
+          "id": "c013bf8c9444",
+          "issues": [
+            "route"
+          ],
+          "text": "@AppleSupport hi i need to get a new apple id without using a credit card please help me",
+          "gold_intent": "account_security",
+          "pred_intent": "account_security",
+          "gold_route": "auto",
+          "pred_route": "escalate",
+          "gold_reason": "Complete how-to with a documented settings path or public article. Safe to auto-send a first-line answer.",
+          "pred_reason": "Account lockout/recovery can lock someone out of a device. Apple historically moved these to account specialists \u2014 a human must own it.",
+          "reply": "We're here to help. Apple ID / lockout issues need the account-security path, not a public workaround. Do not post your password or verification codes here. A specialist should take Apple ID recovery (iforgot / account security), which is what Apple did historically. Start with: https://t.co/ggVDoc1mU7"
+        },
+        {
+          "id": "b57589d941f3",
+          "issues": [
+            "intent"
+          ],
+          "text": "IM SICK OF THIS SHIT @115858!!  WHY IS MY PHONE ALWAYS DYING?? WHY HAVENT YOU FIGURED OUT HOW TO SELF CHARGE THE IPHONE?! https://t.co/JfJM8sdeLN",
+          "gold_intent": "battery_power",
+          "pred_intent": "other",
+          "gold_route": "escalate",
+          "pred_route": "escalate",
+          "gold_reason": "Battery drain after an OS update was almost never closed in public. Needs model + iOS + a specialist.",
+          "pred_reason": "Battery drain after an OS update was Apple's most common DM case. Public tweets rarely resolved it.",
+          "reply": "That's not the experience we want you to have. We want to make sure we understand the issue before we change anything on the device. We see this is on iPhone. This needs a human-owned next step rather than an auto-send. Related article from similar resolved threads: https://t.co/xXaXeeSRt9"
+        },
+        {
+          "id": "9bd19e6395fc",
+          "issues": [
+            "intent"
+          ],
+          "text": "@AppleSupport I\u2019m locked out of my iMac - done recovery but when I go to install osx it says temporarily unavailable and it has for 3 days",
+          "gold_intent": "macos",
+          "pred_intent": "account_security",
+          "gold_route": "escalate",
+          "pred_route": "escalate",
+          "gold_reason": "Mac install/performance/bricking. Often Safe Mode/NVRAM or a specialty team \u2014 not auto-send.",
+          "pred_reason": "Account lockout/recovery can lock someone out of a device. Apple historically moved these to account specialists \u2014 a human must own it.",
+          "reply": "We're here to help. Apple ID / lockout issues need the account-security path, not a public workaround. We see this is on Imac. Do not post your password or verification codes here. A specialist should take Apple ID recovery (iforgot / account security), which is what Apple did historically. Start with: https://t.co/UJm15vmMM2"
+        }
+      ],
+      "predictions_path": "C:\\Users\\91939\\Desktop\\hiver\\results\\golden_predictions.jsonl"
+    }
+  },
+  "judge_human_agreement": {
+    "n": 40,
+    "exact_total_agreement": 0.45,
+    "within_1_total": 0.65,
+    "pearson_total": 0.012,
+    "quadratic_weighted_kappa_total": 0.007,
+    "pass_at_7_agreement": 0.9,
+    "per_dimension_exact": {
+      "groundedness": 0.525,
+      "helpfulness": 0.575,
+      "brand_voice": 1.0,
+      "safety": 0.975,
+      "routing_consistency": 0.775
+    }
+  }
+}
